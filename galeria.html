@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería ♥ Recuerdos para Mami Lissy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pacifico&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%96%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="bg-stars"></div>
+  <div class="bg-grid"></div>
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <nav class="arcade-nav">
+    <div class="nav-logo">
+      <span class="heart-icon">♥</span>
+      <span class="logo-text">LISSY ARCADE</span>
+      <span class="heart-icon">♥</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="galeria.html" class="active">GALERÍA</a></li>
+      <li><a href="juego.html">JUEGO</a></li>
+    </ul>
+  </nav>
+
+  <header class="gallery-hero">
+    <h1>★ GALERÍA DE RECUERDOS ★</h1>
+    <p>Cada foto, un te amo · Cada recuerdo, un abrazo</p>
+  </header>
+
+  <!-- Sección para subir fotos -->
+  <section class="upload-section" id="uploadSection">
+    <div class="upload-icon">📸</div>
+    <h3>SUBE FOTOS DE MAMÁ</h3>
+    <p>Arrastra y suelta tus fotos aquí, o haz clic en el botón.<br />
+       Cada foto aparecerá con un mensaje de "Feliz Día, Mami".</p>
+    <input type="file" id="photoInput" class="upload-input" accept="image/*" multiple />
+    <label for="photoInput" class="upload-btn">+ AÑADIR FOTOS</label>
+    <div class="gallery-controls" id="photoCount">0 fotos cargadas</div>
+  </section>
+
+  <!-- Carrusel -->
+  <section class="carousel-container">
+    <div class="carousel" id="carousel">
+      <button class="carousel-nav prev" id="prevBtn" aria-label="Anterior">‹</button>
+      <button class="carousel-nav next" id="nextBtn" aria-label="Siguiente">›</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="empty-carousel" id="emptyState">
+          <div class="empty-icon">💖</div>
+          <p>SUBE TUS FOTOS PARA <br/>EMPEZAR EL CARRUSEL</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="gallery-actions">
+      <button class="danger-btn" id="clearBtn" style="display: none;">🗑 LIMPIAR GALERÍA</button>
+    </div>
+  </section>
+
+  <section class="cta-section" style="margin-top: 3rem;">
+    <h2 class="cta-title">¿LISTA PARA JUGAR?</h2>
+    <p class="cta-sub">Te tengo una sorpresa en el modo arcade ♥</p>
+    <a href="juego.html" class="arcade-btn pink big-btn">▶ IR AL JUEGO</a>
+  </section>
+
+  <footer class="arcade-footer">
+    <p>★ HECHO CON ♥ POR DÉBORA PARA SU MAMI LISSY ★</p>
+    <p class="footer-sub">© 2026 — UN REGALO DE DÍA DE LA MADRE</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/galeria.js"></script>
+</body>
+</html>
