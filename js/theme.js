@@ -20,8 +20,9 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    var cur = document.documentElement.getAttribute('data-theme');
-    if (cur !== 'light' && cur !== 'dark') cur = 'dark';
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    var cur = saved === 'light' ? 'light' : 'dark';
     apply(cur);
     document.querySelectorAll('[data-theme-pick]').forEach(function (btn) {
       btn.addEventListener('click', function () {
