@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0221" id="theme-color-meta" />
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('lissy-theme');
+        document.documentElement.setAttribute('data-theme', s === 'light' || s === 'dark' ? s : 'dark');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <title>Juego ♥ Débora corre hacia mami Lissy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,11 +32,17 @@
       <span class="logo-text">LISSY ARCADE</span>
       <span class="heart-icon">♥</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">INICIO</a></li>
-      <li><a href="galeria.html">GALERÍA</a></li>
-      <li><a href="juego.html" class="active">JUEGO</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="galeria.html">GALERÍA</a></li>
+        <li><a href="juego.html" class="active">JUEGO</a></li>
+      </ul>
+      <div class="theme-switch" role="group" aria-label="Tema de la página">
+        <button type="button" class="theme-btn" data-theme-pick="dark" aria-pressed="true">Oscuro</button>
+        <button type="button" class="theme-btn" data-theme-pick="light" aria-pressed="false">Claro</button>
+      </div>
+    </div>
   </nav>
 
   <header class="game-hero">
@@ -98,6 +115,7 @@
     <p class="footer-sub">© 2026 — UN REGALO DE DÍA DE LA MADRE</p>
   </footer>
 
+  <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
   <script src="js/juego.js"></script>
 </body>

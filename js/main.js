@@ -88,7 +88,7 @@
     }
   }
 
-  document.querySelectorAll('.arcade-btn, .nav-links a, .game-btn, .diff-btn').forEach((btn) => {
+  document.querySelectorAll('.arcade-btn, .nav-links a, .game-btn, .diff-btn, .theme-btn').forEach((btn) => {
     btn.addEventListener('mouseenter', () => beep(800, 0.05));
     btn.addEventListener('click', () => beep(1200, 0.1));
   });

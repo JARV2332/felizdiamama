@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0221" id="theme-color-meta" />
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('lissy-theme');
+        document.documentElement.setAttribute('data-theme', s === 'light' || s === 'dark' ? s : 'dark');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <title>Feliz Día Mamá Lissy ♥ Para mi mami con amor</title>
   <meta name="description" content="Una dedicatoria especial de Débora para su mamá Lissy en el Día de la Madre" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,11 +35,17 @@
       <span class="logo-text">LISSY ARCADE</span>
       <span class="heart-icon">♥</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">INICIO</a></li>
-      <li><a href="galeria.html">GALERÍA</a></li>
-      <li><a href="juego.html">JUEGO</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="galeria.html">GALERÍA</a></li>
+        <li><a href="juego.html">JUEGO</a></li>
+      </ul>
+      <div class="theme-switch" role="group" aria-label="Tema de la página">
+        <button type="button" class="theme-btn" data-theme-pick="dark" aria-pressed="true">Oscuro</button>
+        <button type="button" class="theme-btn" data-theme-pick="light" aria-pressed="false">Claro</button>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero principal -->
@@ -206,6 +223,7 @@
     <p class="footer-sub">© 2026 — UN REGALO DE DÍA DE LA MADRE</p>
   </footer>
 
+  <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

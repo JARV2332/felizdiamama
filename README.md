@@ -8,6 +8,8 @@ Una web app arcade femenina dedicada a **Lissy**, hecha con todo el amor por su 
 - **Galería** (`galeria.html`) — Carrusel automático donde puedes subir fotos de mamá. Cada foto sale con un mensaje de "Feliz Día Mami". Las fotos se guardan en el navegador.
 - **Juego** (`juego.html`) — Estilo dinosaurio de Google: Débora (en muñequito) corre y salta obstáculos. Tiene **3 niveles de dificultad** y al llegar a 500 puntos en **cualquier nivel** aparece mami Lissy con un **FELIZ DÍA DE LAS MADRES**.
 
+- **Modo oscuro / modo claro** — En la barra superior elige **Oscuro** o **Claro**; la preferencia se guarda en el dispositivo (ideal para móvil).
+
 ## Estructura
 
 ```
@@ -18,6 +20,7 @@ feliz-dia-lissy/
 ├── css/
 │   └── styles.css
 ├── js/
+│   ├── theme.js       ← tema claro/oscuro
 │   ├── main.js
 │   ├── galeria.js
 │   └── juego.js
